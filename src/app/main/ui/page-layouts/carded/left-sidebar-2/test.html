@@ -1,0 +1,368 @@
+<div id="academy-courses" class="page-layout carded fullwidth inner-scroll" fxLayout="column"
+    fxLayoutAlign="center center" fxFlex [@fadeInOnEnter]>
+
+    <div class="center">
+
+        <!-- CONTENT HEADER -->
+        <div class="header pt-24 pb-24" fxLayout="row" fxLayoutAlign="space-between center">
+
+            <h1 [@animate]="{ value:'*', params:{ delay: '100ms', x:'-25px' } }">Children Details</h1>
+
+        </div>
+        <!-- / CONTENT HEADER -->
+
+        <!-- CONTENT CARD -->
+        <div class="content-card ps" [ngClass]="{ 'current-item-selected' : currentChild }"
+            [@animate]="{ value:'*', params:{ delay: '100ms', y:'15px' } }">
+
+            <!-- CONTENT TOOLBAR -->
+            <!-- <div class="toolbar px-8 py-8" fxLayout="row" fxLayoutAlign="space-between center">
+
+                <span fxLayout="row" fxLayoutAlign="space-between center">
+
+
+                    <button class="text-uppercase blank" [ngClass]="{ 'active' : filterActive }" nz-button nzType="link"
+                        [disabled]="disableFilterButton" (click)="toggleSidebar('parent-child-select-sidebar')">
+                        <img src="assets/icons/flat/ui_set/custom_icons/more.svg" alt="view booking-request">
+                    </button>
+
+                </span>
+
+            </div> -->
+            <div class="p-24 pt-8 ps">
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="mb-24 header-profile">
+
+                    <span class="view-title">
+
+                        <button type="button" class="b-nav blank mr-8" nz-button nzType="default">
+                            <i class="chevron left icon"></i>
+                        </button>
+
+                        <span class="date-input-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+                            <span class="date-label">
+                                <nz-avatar [nzSize]="56" nzSrc="" class="child-img img-bg"></nz-avatar>
+
+                                <span>
+                                    child name
+                                </span>
+                            </span>
+
+                            <!-- <nz-month-picker class="date-input" 
+                                [formControl]="calendarDate"
+                                [nzOpen]="openCalendarView" 
+                                nzPlaceHolder="Select Month"
+                                [nzRenderExtraFooter]="monthPicker"></nz-month-picker> -->
+
+                            <!-- <ng-template #monthPicker>
+                                <div class="py-8">
+                                    <button type="button" nzBlock nz-button nzType="primary" (click)="toggleCalendar($event)">
+                                        Close
+                                    </button>
+                                </div>
+                            </ng-template> -->
+
+                        </span>
+
+                        <button type="button" class="b-nav blank ml-8" nz-button nzType="default">
+                            <i class="chevron right icon"></i>
+                        </button>
+
+                    </span>
+                    <span class="child-info">
+                        <span class="child-name">
+                            other details here
+                        </span>
+                    </span>
+                </div>
+
+                <div class="content mt-50 profile-info" fxLayout="column" fusePerfectScrollbar
+                    [fusePerfectScrollbarOptions]="{ suppressScrollX: true }">
+                    <nz-tabset [nzAnimated]="false" [nzSize]="'large'">
+
+                        <nz-tab [nzTitle]="titleTemplateBasic">
+
+                            <div class="pl-4 pr-4">
+
+                                <ng-template nz-tab>
+                                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum.
+
+                                        Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                        that it has a more-or-less normal distribution of letters, as opposed to using
+                                        'Content here, content here', making it look like readable English. Many desktop
+                                        publishing packages and web page editors now use Lorem Ipsum as their default
+                                        model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                                        their infancy. Various versions have evolved over the years, sometimes by
+                                        accident, sometimes on purpose (injected humour and the like).
+
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum.
+
+                                        Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                        that it has a more-or-less normal distribution of letters, as opposed to using
+                                        'Content here, content here', making it look like readable English. Many desktop
+                                        publishing packages and web page editors now use Lorem Ipsum as their default
+                                        model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                                        their infancy. Various versions have evolved over the years, sometimes by
+                                        accident, sometimes on purpose (injected humour and the like).
+
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum.
+
+                                        Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                        that it has a more-or-less normal distribution of letters, as opposed to using
+                                        'Content here, content here', making it look like readable English. Many desktop
+                                        publishing packages and web page editors now use Lorem Ipsum as their default
+                                        model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                                        their infancy. Various versions have evolved over the years, sometimes by
+                                        accident, sometimes on purpose (injected humour and the like).
+
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum.
+
+                                        Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                        that it has a more-or-less normal distribution of letters, as opposed to using
+                                        'Content here, content here', making it look like readable English. Many desktop
+                                        publishing packages and web page editors now use Lorem Ipsum as their default
+                                        model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                                        their infancy. Various versions have evolved over the years, sometimes by
+                                        accident, sometimes on purpose (injected humour and the like).
+
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum.
+
+                                        Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                        that it has a more-or-less normal distribution of letters, as opposed to using
+                                        'Content here, content here', making it look like readable English. Many desktop
+                                        publishing packages and web page editors now use Lorem Ipsum as their default
+                                        model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                                        their infancy. Various versions have evolved over the years, sometimes by
+                                        accident, sometimes on purpose (injected humour and the like).
+
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum.
+
+                                        Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                        that it has a more-or-less normal distribution of letters, as opposed to using
+                                        'Content here, content here', making it look like readable English. Many desktop
+                                        publishing packages and web page editors now use Lorem Ipsum as their default
+                                        model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                                        their infancy. Various versions have evolved over the years, sometimes by
+                                        accident, sometimes on purpose (injected humour and the like).
+                                        <!-- <div id="profile">
+                                            <div class="about-content" fxLayout="column" fxFlex="100" fxFlex.gt-sm="50" fxFlex.gt-md="50">
+
+                                                <div class="profile-box info-box general" fxLayout="column" nzLoading="true">
+                                                    <header class="accent">
+                                                        <div class="title">
+                                                            <div mat-dialog-actions class="m-0 p-16" fxLayout="row" fxLayoutAlign="space-between center">
+                                                                <span>Basic information</span>
+                                                            </div>
+                                        
+                                                        </div>
+                                        
+                                                    </header>
+                                        
+                                                    <div class="content">
+                                                        <ng-container>
+                                                            <div class="info-line">
+                                                                <p>
+                                                                    <span class="lbl font-weight-600">First Name</span>
+                                                                    name
+                                                                </p>
+                                                            </div>
+                                                            <div class="info-line">
+                                                                <p>
+                                                                    <span class="lbl font-weight-600">Middle Name</span>
+                                                                    ane
+                                                                </p>
+                                                            </div>
+                                                            <div class="info-line">
+                                                                <p>
+                                                                    <span class="lbl font-weight-600">Last Name</span>
+                                                                    lname
+                                                                </p>
+                                                            </div>
+                                                            <div class="info-line">
+                                                                <p>
+                                                                    <span class="lbl font-weight-600">Gender</span>
+                                                                    gender
+                                                                </p>
+                                                            </div>
+                                        
+                                                            <div class="info-line">
+                                        
+                                                                <p>
+                                                                    <span class="lbl font-weight-600">Date of Birth</span>
+                                                                   dob
+                                                                </p>
+                                        
+                                                            </div>
+                                                            <div class="info-line">
+                                                                <p>
+                                                                    <span class="lbl font-weight-600">Age</span>
+                                                                    age
+                                                                </p>
+                                                            </div>
+                                                            <div class="info-line">
+                                                                <p>
+                                                                    <span class="lbl font-weight-600">Note</span>
+                                                                    note
+                                                                </p>
+                                                            </div>
+                                                            <div class="info-line">
+                                                                <p>
+                                                                    <span class="lbl font-weight-600">Join Date</span>
+                                                                    jdate
+                                                                </p>
+                                                            </div>
+                                                        </ng-container>
+                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        
+                                            <div class="timeline-sidebar" fxLayout="column" fxFlex="100" fxFlex.gt-sm="50" fxFlex.gt-md="50">
+                                                <div class="profile-box info-box general" fxLayout="column">
+                                                    <header class="accent">
+                                                        <div class="title">
+                                                            <div mat-dialog-actions class="m-0 p-16" fxLayout="row" fxLayoutAlign="space-between center">
+                                                                <span>Other Information</span>
+                                                            </div>
+                                        
+                                                        </div>
+                                        
+                                                    </header>
+                                        
+                                                    <div class="content">
+                                                        <ng-container>
+                                                            <div class="info-line">
+                                                                <p>
+                                                                    <span class="lbl font-weight-600">Room</span>
+                                                                    room
+                                                                </p>
+                                                            </div>
+                                                            <div class="info-line">
+                                                                <p>
+                                                                    <span class="lbl font-weight-600">Attendance</span>
+                                                                    attendance labl
+                                                                </p>
+                                                            </div>
+                                                        </ng-container>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        
+                                    </div>
+                                </ng-template>
+                            </div>
+                        </nz-tab>
+
+                        <nz-tab [nzTitle]="titleTemplateBasic">
+
+                            <div class="pl-4 pr-4">
+
+                                <ng-template nz-tab>
+                                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
+                                        Content here
+                                    </div>
+                                </ng-template>
+                            </div>
+                        </nz-tab>
+
+                        <nz-tab [nzTitle]="titleTemplateBasic">
+
+                            <div class="pl-4 pr-4">
+
+                                <ng-template nz-tab>
+                                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
+                                        Content here
+                                    </div>
+                                </ng-template>
+                            </div>
+                        </nz-tab>
+
+                    </nz-tabset>
+                </div>
+            </div>
+
+            <ng-template #titleTemplateBasic>
+                <div class="tab-image-view" fxLayoutAlign="center center">
+                    <img src="assets/icons/flat/ui_set/custom_icons/child/basic.svg" alt="img">
+                    <span>Basic</span>
+                </div>
+            </ng-template>
+            <!-- / CONTENT TOOLBAR -->
+
+            <!-- CONTENT -->
+
+
+            <!-- / CONTENT -->
+            <!-- SIDEBAR FILTER -->
+            <fuse-sidebar class="sidebar" name="parent-child-select-sidebar" position="top">
+
+                <parent-child-select-sidebar [@animate]="{ value:'*', params:{ delay: '200ms', x:'-30px' } }">
+                </parent-child-select-sidebar>
+
+            </fuse-sidebar>
+            <!-- / SIDEBAR FILTER -->
+
+        </div>
+        <!-- / CONTENT CARD -->
+
+    </div>
+    <!-- / CENTER -->
+
+</div>
